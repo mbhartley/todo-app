@@ -1,7 +1,7 @@
 
-var todoList = [
-  {
-    description: 'do laundry',
+var todoList = [								   //this simply allows pre-rendered data to exist 
+  {												   //  on our page so that when the page refreshes we 	
+    description: 'do laundry',					   //  are not void of data					
     done: false,
     id: _.uniqueId()
   },
@@ -19,7 +19,7 @@ var todoList = [
 
 $(document).ready(function(){
 
-  var todoTemplate = _.template($('.todo-template').text())
+  var todoTemplate = _.template($('.todo-template').text())	//creates a reference to  our template in html
 
   _.each(todoList, function(item){					//render pre-loaded data onto page
     $('.todo-items').prepend(todoTemplate(item))
