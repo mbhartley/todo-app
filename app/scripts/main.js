@@ -26,7 +26,7 @@ $(document).ready(function(){
   })
 
 $('.add-button').click(function(){					//add a click event to the .add-button
-  var description = $('.js-task-input').val();	    //grab the input value and store it in a var description
+  var description = $('.js-tasks-input').val();	    //grab the input value and store it in a var description
 
   var todo = {										//create object literal with the var description ???
     description: description,						
@@ -38,6 +38,7 @@ $('.add-button').click(function(){					//add a click event to the .add-button
 
 $('.todo-items').prepend(renderedTemplate);			//prepend the rendered template into todo-items div
  
+
 })
 
 })
