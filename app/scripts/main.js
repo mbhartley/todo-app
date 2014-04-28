@@ -1,7 +1,8 @@
-
-var todoList = [								   //this simply allows pre-rendered data to exist 
-  {												   //  on our page so that when the page refreshes we 	
-    description: 'do laundry',					   //  are not void of data					
+/*this simply allows pre-rendered data to exist on the page so that when the page refreshes
+we are not void of data; no data-persistence yet*/
+var todoList = [						
+  {												   
+    description: 'do laundry',					   				
     done: false,
     id: _.uniqueId()
   },
@@ -19,27 +20,32 @@ var todoList = [								   //this simply allows pre-rendered data to exist
 
 $(document).ready(function(){
 
-  var todoTemplate = _.template($('.todo-template').text())	//creates a reference to  our template in html
-
-  _.each(todoList, function(item){					//render pre-loaded data onto page
+  //creates a reference to  our template in html
+  var todoTemplate = _.template($('.todo-template').text())	
+  
+  //render pre-loaded data onto page
+  _.each(todoList, function(item){					
     $('.todo-items').prepend(todoTemplate(item))
   })
 
-$('.add-button').click(function(){					//add a click event to the .add-button
-  var description = $('.js-tasks-input').val();	    //grab the input value and store it in a var description
+  //grab the input value on click and store it in a var description
+  $('.add-button').click(function(){					
+    var description = $('.js-tasks-input').val();	    
 
-  var todo = {										//create object literal with the var description ???
-    description: description,						
-    done: false,									//done: false (so, later we can set done button up)
-    id: _.uniqueId()								//give a unique id for the purpose of storing it in an array
-  }
+    var todo = {										//create object literal with the var description ???
+      description: description,						
+      done: false,									//done: false (so, later we can set done button up)
+      id: _.uniqueId()							//give a unique id for the purpose of storing it in an array
+    }
 
-  var renderedTemplate = todoTemplate(todo);	    //store the rendered template string ???
-
-$('.todo-items').prepend(renderedTemplate);			//prepend the rendered template into todo-items div
+    //store the rendered template string ???
+    var renderedTemplate = todoTemplate(todo);	    
+  
+    //prepend the rendered template into todo-items div
+    $('.todo-items').prepend(renderedTemplate);			
  
 
-})
+  })
 
 })
 

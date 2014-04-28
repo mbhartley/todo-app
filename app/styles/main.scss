@@ -15,26 +15,28 @@ body {
     padding-bottom: 20px;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-    padding-left: 15px;
-    padding-right: 15px;
+#background-image {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+  
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  opacity: 0.35;
+  filter: blur(1.5px);
 }
 
-/* Custom page header */
 .header {
-    border-bottom: 1px solid #e5e5e5;
-
-    /* Make the masthead heading the same height as the navigation */
-    h3 {
-        margin-top: 0;
-        margin-bottom: 0;
-        line-height: 40px;
-        padding-bottom: 19px;
-    }
+    color: rgb(2, 27, 84);
 }
+
 .container {
     width: 960px;
     position: relative;
@@ -46,8 +48,8 @@ body {
     font-size: 46px;
     text-align: center;
     margin-top: 100px;
-    font-weight: 600;
-    color: #5cb85c;
+    font-weight: 700;
+    color: rgb(3, 31, 76);
     opacity: 0.7;
 }
 
@@ -70,7 +72,7 @@ body {
     color: white;
     opacity: 0.7;
     font-weight: 600;
-    background-color: #5cb85c;
+    background-color: rgb(3, 31, 76);
 }
 
 .todo-items {
@@ -79,7 +81,7 @@ body {
 }
 
 .todo-item {
-    border-top: 1px solid #5cb85c;
+    border-top: 1px solid rgb(3, 31, 76);
     height: 44px;
     width: 348px;
     opacity: 0.7;   

@@ -23,26 +23,26 @@
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <img src="images/todo-pic.jpg" id="background-image">
 
 
-        <div class="container">
-            <div class="header">
-                <ul class="nav nav-pills pull-right">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-                <h3 class="text-muted">todo app</h3>
-            </div>
+        <div class="header">
+          <div class="container">
+            <h1>To Do App</h1>
+            <h4 class="text-muted">created by Matt Hartley for The Iron Yard Academy</h4>
+          </div>
+        </div>
 
         <div class="container">
-          <div class="app-title">matt's todos</div>
-            <div class="input-all">
-              <div class="input-tasks">
-                <input class="tasks-input js-tasks-input"></input>
-                <button type="button" class="add-button">Add</button>
-              </div>
-              <div class="todo-items"></div>                            <!--prepend into this div-->
+            <div class="app-pane">
+              <div class="app-title">matt's todos</div>
+                <div class="input-all">
+                  <div class="input-tasks">
+                    <input class="tasks-input js-tasks-input"></input>
+                    <button type="button" class="add-button">Add</button>
+                  </div>
+                  <div class="todo-items"></div> 
+                </div>
             </div>
         </div>      
 
@@ -55,7 +55,7 @@
        <script type="text/template" class="todo-template">              
             <div class="todo-item" id="todo-<%= id %>">                 
                 <div class="description">                               
-                    <span class="id">#<%= id %></span>                  
+                                     
                     <%= description %>
                 </div>
                 <div class="task-buttons">
