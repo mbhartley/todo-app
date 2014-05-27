@@ -38,7 +38,7 @@
               <div class="app-title">matt's todos</div>
                 <div class="input-all">
                   <div class="input-tasks">
-                    <input class="tasks-input js-tasks-input"></input>
+                    <input class="tasks-input js-tasks-input" maxlength="16"></input>
                     <button type="button" class="add-button">Add</button>
                   </div>
                   <div class="todo-items"></div> 
@@ -46,32 +46,30 @@
             </div>
         </div>      
 
-          
-<!--i am definitely not comfortable-->
-<!--creating templates; this was pretty-->
-<!--much copied and pasted without much-->
-<!--if any original thought from me-->
+        <!-- TEMPLATE -->
 
-       <script type="text/template" class="todo-template">              
-            <div class="todo-item" id="todo-<%= id %>">                 
-                <div class="description">                               
-                                     
-                    <%= description %>
-                </div>
-                <div class="task-buttons">
-                <button type="button" class="btn btn-default">
+        <script type="text/template" class="todo-template">              
+            
+            <div class="todo-item" id="<%= id %>">                 
+                
+                  
+                <button type="button" class="btn btn-default complete-button">
                   <span class="glyphicon glyphicon-ok"></span>
                 </button>
 
-                <button type="button" class="btn btn-default">
+                <button type="button" class="btn btn-default edit-button">
                   <span class="glyphicon glyphicon-pencil"></span>
                 </button>
 
-                <button type="button" class="btn btn-default js-remove-todo">
+                <button type="button" class="btn btn-default remove-button js-remove-todo">
                   <span class="glyphicon glyphicon-remove"></span>
                 </button>
-                </div>
+                
+                <input class="edit-input" placeholder="<%= description %>">
+                <div class="description"> <%= description %> </div>
+
             </div>
+
         </script>   
 
 

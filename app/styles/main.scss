@@ -78,13 +78,16 @@ body {
 .todo-items {
     margin-left: 300px;
     margin-top: 20px;
+    background-color: rgb(240, 242, 145);
+    border-radius: 4px;
 }
 
 .todo-item {
-    border-top: 1px solid rgb(3, 31, 76);
+    border-bottom: 1px solid rgb(3, 31, 76);
     height: 44px;
     width: 348px;
-    opacity: 0.7;   
+    opacity: 0.7;
+    padding-left: 4px;   
 }
 
 .task-buttons {
@@ -97,13 +100,42 @@ body {
 .description {
     display: inline-block;
     font-size: 22px;
-    margin-left: 4px;
     line-height: 44px;
 }
 
 .input-all {
   width: 650px;
 }
+
+// Button Positions
+
+.remove-button {
+  margin-bottom: 8px;
+}
+
+.edit-button {
+  margin-bottom: 8px;
+}
+
+.complete-button {
+  margin-bottom: 8px;
+}
+
+// Edit Input Div
+
+.edit-input {
+  display: none;
+}
+
+// Complete Button Edits
+
+.description.strikethrough {
+    text-decoration: line-through;
+}
+
+
+
+
 
 
 
